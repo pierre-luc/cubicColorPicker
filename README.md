@@ -1,7 +1,5 @@
 CubicColorPicker
 ================
-![preview](http://puu.sh/q44zS/5e0e96c2e0.png)
-
 Demo
 ----
 
@@ -16,3 +14,5 @@ $(picker).on('colorHasChanged', function(){
   picker.copyColor(); // copy the color into the clipboard
 });
 ```
+
+![preview](http://puu.sh/q44zS/5e0e96c2e0.png)
