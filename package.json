@@ -1,0 +1,51 @@
+{
+  "name": "cubicColorPicker",
+  "version": "0.0.0",
+  "description": "A 3D color picker",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gsap": "^1.18.5",
+    "gulp-task": "^2.0.5",
+    "jquery": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierre-luc/cubicColorPicker"
+  },
+  "keywords": [
+    "colorpicker",
+    "color",
+    "picker",
+    "3d",
+    "plugin",
+    "javascript",
+    "js",
+    "jquery"
+  ],
+  "author": "Pierre-Luc BLOT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierre-luc/cubicColorPicker/issues"
+  },
+  "homepage": "https://github.com/pierre-luc/cubicColorPicker",
+  "devDependencies": {
+    "compass-mixins": "^0.12.7",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-file-include": "^0.13.7",
+    "gulp-include": "^2.0.3",
+    "gulp-insert": "^0.5.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-minify": "0.0.5",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-resolve-dependencies": "^2.2.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.4.2"
+  }
+}
