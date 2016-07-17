@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CubicColorPicker</title>
+    <style>
+      .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <link rel="stylesheet" href="dist/css/cubicColorPicker.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/gsap/src/minified/TimelineMax.min.js"></script>
+    <script src="node_modules/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="node_modules/gsap/src/minified/utils/Draggable.min.js"></script>
+    <script src="dist/js/cubicColorPicker.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="picker"></div>
+    </div>
+    <script>
+      var picker = new CubicColorPicker($('#picker')[0]);
+
+      $(picker).on('colorHasChanged', function(){
+        picker.copyColor(); // copy the color into the clipboard
+      });
+    </script>
+  </body>
+</html>
