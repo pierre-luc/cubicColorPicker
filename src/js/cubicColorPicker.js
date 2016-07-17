@@ -119,7 +119,9 @@
     function Update(){
       var percent = Math.abs(this.y / self.bezier[2].x);
       self.percent = percent;
-      tl.progress(percent)
+
+      tl.progress(percent);
+
       if (parseInt(this.y) != parseInt(self.value)){
         $(self).trigger('valueHasChanged');
       }
@@ -135,6 +137,10 @@
   CurveSlider.prototype.changeKnobColor = function(color){
     this.colors.knob = color;
     this.knob.setAttributeNS(null, 'fill', this.colors.knob);
+  }
+  CurveSlider.prototype.changeLineColor = function(color){
+    this.colors.line = color;
+    this.path2.setAttributeNS(null, 'stroke', this.colors.line);
   }
 
   var gradientIMG = new Image();{
@@ -304,7 +310,11 @@ gradientIMG.src = 'data:image/  png;base64,iVBORw0KGgoAAAANSUhEUgAABCwAAAMACAIAA
     makeDOMPicker(element);
 
     var opacitySliderElement = div('opacity-slider');{
-      self.opacitySlider = new CurveSlider(opacitySliderElement);
+      self.opacitySlider = new CurveSlider(opacitySliderElement,{
+        colors: {
+          min: 'transparent'
+        }
+      });
       var cube = $(self.element).find('.cube');
       $(self.opacitySlider).on('valueHasChanged', function(){
         self.currentColor.a = 1 - this.percent;
@@ -475,6 +485,7 @@ gradientIMG.src = 'data:image/  png;base64,iVBORw0KGgoAAAANSUhEUgAABCwAAAMACAIAA
     $(this.element).find('.color').html(color);
     $(this.element).css('border-color', color);
     this.opacitySlider.changeKnobColor(color);
+    this.opacitySlider.changeLineColor(color);
   };
 
   CubicColorPicker.prototype.rotate = function(x, y){
