@@ -1,5 +1,12 @@
 CubicColorPicker
 ================
+
+Installation
+------------
+```bash
+npm install cubicColorPicker
+```
+
 Demo
 ----
 
