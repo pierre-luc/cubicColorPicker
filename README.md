@@ -10,7 +10,7 @@ npm install cubicColorPicker
 Demo
 ----
 
-[click here to see the demo](http://codepen.io/pierre-luc/pen/GqyxqG)
+[click here to see the demo](http://codepen.io/pierre-luc/full/GqyxqG)
 
 Dependencies
 ------------
