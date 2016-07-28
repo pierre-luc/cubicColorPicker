@@ -610,10 +610,14 @@ gradientIMG.src = 'data:image/  png;base64,iVBORw0KGgoAAAANSUhEUgAABCwAAAMACAIAA
       self.rotate(self.mouse.coords.xDegree, self.mouse.coords.yDegree);
   };
 
-  CubicColorPicker.prototype.copyColor = function(){
+  CubicColorPicker.prototype.getColor = function(){
     var color = this.selectedColor.a == 1 ? this.selectedColor.toHex() : this.selectedColor.toRGBA();
     console.log(color);
-    copyToClipboard(color.toUpperCase());
+    return color.toUpperCase();
+  }
+  
+  CubicColorPicker.prototype.copyColor = function(){
+    copyToClipboard(this.getColor());
   };
 
   if (typeof window.CubicColorPicker === 'undefined'){
