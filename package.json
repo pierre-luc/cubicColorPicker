@@ -1,6 +1,6 @@
 {
   "name": "cubicColorPicker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A 3D color picker",
   "main": "gulpfile.js",
   "dependencies": {

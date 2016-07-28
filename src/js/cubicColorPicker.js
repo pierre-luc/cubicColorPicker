@@ -302,7 +302,13 @@ gradientIMG.src = 'data:image/  png;base64,iVBORw0KGgoAAAANSUhEUgAABCwAAAMACAIAA
     }, 50);
   };
 
+  var pickerMap = new Map();
+
   var CubicColorPicker = function(element){
+    if (typeof pickerMap.get(element) !== 'undefined'){
+      throw new Error('the picker is already plugged');
+    }
+    pickerMap.set(element, this);
     var self = this;
     this.element = element;
     this.minimized = false;
